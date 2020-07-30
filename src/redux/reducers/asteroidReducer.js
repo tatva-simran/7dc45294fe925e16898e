@@ -3,7 +3,7 @@ import produce from 'immer';
 import { GET_ASTEROID_DATA, SET_ASTEROID_DATA} from '../actions/asteroidActions';
 
 export const initialState = {
-  news: {},
+  asteroidData: {},
   loading: false,
 };
 
@@ -14,7 +14,7 @@ const reducer = (state = initialState, action) =>
         draft.loading = true;
         break;
       case SET_ASTEROID_DATA:
-        draft.news = action.actionItems;
+        draft.asteroidData = action.data;
         draft.loading = false;
         break;
 
